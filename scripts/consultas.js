@@ -115,6 +115,10 @@ db.inspections.find({
 db.inspections.find({
     "restaurant_id": "55f14312c7447c3da7051b5c"
 }).explain("executionStats");
+
+db.inspectionsIso.find({ 
+    date: { $gte: ISODate("2024-03-01T00:00:00Z") } 
+}).explain("executionStats");
   
   
 
